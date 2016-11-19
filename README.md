@@ -26,3 +26,6 @@ These are some of the common patterns I have found useful while solving Hive dep
 ### How do I download hive metastore logs?
 
 ### How do I download hiveserver logs?
+
+### How to I start hive shell with debug logging enabled on console?
+hive -hiveconf hive.root.logger=ALL,console
