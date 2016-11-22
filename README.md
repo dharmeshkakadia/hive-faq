@@ -34,13 +34,13 @@ hive -hiveconf hive.root.logger=ALL,console
 set hive.execution.engine=tez
 
 ### How do I download tez DAG data?
-hadoop jar /usr/hdp/current/tez-client/tez-history-parser-*.jar org.apache.tez.history.ATSImportTool -downloadDir . -dagId <DagId>
+hadoop jar /usr/hdp/current/tez-client/tez-history-parser-*.jar org.apache.tez.history.ATSImportTool -downloadDir . -dagId \<DagId\>
 
 ### How do I get CrticalPath for a Tez DAG?
-hadoop jar /usr/hdp/current/tez-client/tez-job-analyzer-*.jar CriticalPath --saveResults --dagId <DagId> --eventFileName <DagData.zip>
+hadoop jar /usr/hdp/current/tez-client/tez-job-analyzer-*.jar CriticalPath --saveResults --dagId \<DagId\> --eventFileName \<DagData.zip\>
 
 ### How do I kill an application?
-yarn application -kill <ApIpd>
+yarn application -kill \<ApIpd\>
 
 This will kill any query that is being run as part of the Tez session also.
 
@@ -48,7 +48,7 @@ This will kill any query that is being run as part of the Tez session also.
 yarn top
 
 ### How do I specify the database while starting hive?
-hive -database <databaseName>
+hive -database \<databaseName\>
 
 ### How do I specify a config or variable while starting hive?
 hive -hiveconf a=b
