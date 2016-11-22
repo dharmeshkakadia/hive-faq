@@ -17,7 +17,11 @@ These are some of the common patterns I have found useful while solving Hive dep
 
 ### How many containers I can run in parallel?
 
+### How do I check DAG counters for a query?
+Go to Tez View. Find the DAG and click on Dag counters tab.
+
 ### How do I check that amount of data being read/writted/shuffled by a query?
+Go to Dag counters and look for HDFS_BYTES_READ/HDFS_BYTES_WRITTEN/SHUFFLE_BYTES.
 
 ### How do I download YARN container logs?
 
