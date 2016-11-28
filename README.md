@@ -62,3 +62,6 @@ set hive.auto.convert.join=false
 
 ### How do I decide which joins are converted to mapjoins?
 set hive.auto.convert.join.noconditionaltask.size to value of the largest join you want to convert to mapjoin. For example, set hive.auto.convert.join.noconditionaltask.size=10000000 will convert all joins to mapjoins where hive "estimates" the sum of smallest n-1 tables in n-join is less then 1MB.
+
+### How do I decide the right container size for my workload?
+Magic ! 
