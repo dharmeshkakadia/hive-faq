@@ -111,3 +111,9 @@ In both cases, using a larger cluster or cluster with more disk spaces on nodes 
 
 ### How do I connect to a different database(mydb) when starting beeline?
 ``beeline -u "jdbc:hive2://localhost:10001/mydb;transportMode=http" -n <usernmae> -p <password>``
+
+### How do I set hive scrath directory?
+``set hive.exec.scratchdir=/tmp/hdiuser``
+
+## How do I configure the trash interval for HDFS ?
+Trash interval decides how long the data deleted from HDFS is kept around. You can configure it with ``fs.trash.interval``. The deleted data is kept under ``.Trash/Current`` directory on HDFS and can be restored from there.
