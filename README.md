@@ -109,5 +109,5 @@ In both cases, using a larger cluster or cluster with more disk spaces on nodes 
 ### How do I use connect automatically when starting beeline?
 ``beeline -u "jdbc:hive2://localhost:10001/;transportMode=http" -n <usernmae> -p <password>``
 
-### How do I connect to a different database when starting beeline?
+### How do I connect to a different database(mydb) when starting beeline?
 ``beeline -u "jdbc:hive2://localhost:10001/mydb;transportMode=http" -n <usernmae> -p <password>``
