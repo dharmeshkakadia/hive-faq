@@ -141,3 +141,9 @@ run ``explain extended `` followed by the query string. This includes things lik
 
 ## How do I know if the a perticular join in the query is a map join or a merge join?
 The query plan will have ``Map Join Operator`` and ``Merge Join Operarator`` to indicate that.
+
+## How do I specify ORC split strategy?
+set ``hive.exec.orc.split.strategy``. Possible values are ``BI``, ``ETL`` and ``HYBIRD``.
+
+## Where are all hive configurations listed?
+here : https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties
