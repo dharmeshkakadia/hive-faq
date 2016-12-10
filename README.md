@@ -129,3 +129,15 @@ Trash interval decides how long the data deleted from HDFS is kept around. You c
 
 ## Where can I find more information about Hive ORC configurations?
 here : https://orc.apache.org/docs/hive-config.html
+
+## How do I get the query plan?
+run ``explain `` followed by the query string.
+
+## How do I get machine readble query plan?
+run ``explain formatted `` followed by the query string.
+
+## How do I get very detailed query plans?
+run ``explain extended `` followed by the query string. This includes things like what partitions were pruned.
+
+## How do I know if the a perticular join in the query is a map join or a merge join?
+The query plan will have ``Map Join Operator`` and ``Merge Join Operarator`` to indicate that.
