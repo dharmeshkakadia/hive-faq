@@ -107,5 +107,25 @@ In both cases, using a larger cluster or cluster with more disk spaces on nodes 
 ### How do I set hive scrath directory?
 ``set hive.exec.scratchdir=/tmp/hdiuser``
 
-## How do I configure the trash interval for HDFS ?
+## How do I configure the trash interval for HDFS?
 Trash interval decides how long the data deleted from HDFS is kept around. You can configure it with ``fs.trash.interval``. The deleted data is kept under ``.Trash/Current`` directory on HDFS and can be restored from there.
+
+## How does tez decide how many map tasks to generaete?
+
+## How does tez decide how many reducer tasks to generate?
+
+## How do turn on compression for intermediate output?
+
+## How do I specify compression codec for intermediate output?
+
+## How do I specify the ORC compression?
+``orc.compress``. Possible values are ``NONE``, ``ZLIB`` and ``SNAPPY``. ``ZLIB`` is a good default choice.
+
+## How do I specify ORC strip size?
+``orc.stripe.size``
+
+## How do I specify ORC encoding strategy for integers?
+``hive.exec.orc.encoding.strategy``. Possible values are ``SPEED`` and ``COMPRESSION``.
+
+## Where can I find more information about Hive ORC configurations?
+here : https://orc.apache.org/docs/hive-config.html
