@@ -1,17 +1,6 @@
-# hive-notes
+# Hive Frequently Asked Questions
 
-These are some of the common patterns I have found useful while solving Hive deployements managed by Ambari (such as HDInsight).
-
-## My query fails
-
-### What is the error?
-
-### 
-
-## My query is slow
-
-
-## FAQ
+These are some of the common patterns and questions I have found useful while solving Hive deployements managed by Ambari (such as HDInsight).
 
 ### How do I check my cluster capacity?
 
