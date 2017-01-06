@@ -43,7 +43,13 @@ hive -hiveconf hive.root.logger=ALL,console
 ``set hive.execution.engine=tez``
 
 ### How do I download tez DAG data?
+From commandline:
+
 ``hadoop jar /usr/hdp/current/tez-client/tez-history-parser-*.jar org.apache.tez.history.ATSImportTool -downloadDir . -dagId <DagId>``
+
+From Ambari tez view:
+
+Go to Ambari --> Go to Tez view (hidden under tiles icon in upper right corner) --> Click on the dag you are interested in --> Click on Download data.
 
 ### How do I get CrticalPath for a Tez DAG?
 ``hadoop jar /usr/hdp/current/tez-client/tez-job-analyzer-*.jar CriticalPath --saveResults --dagId <DagId> --eventFileName <DagData.zip>``
