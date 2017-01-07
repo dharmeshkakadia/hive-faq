@@ -71,7 +71,13 @@ You can list all the available analyzers with ``hadoop jar /usr/hdp/current/tez-
   * VertexLevelCriticalPathAnalyzer: Find critical path at vertex level in a DAG
 
 ### How do I kill an application?
+From the command line:
+
 ``yarn application -kill <application_id>``
+
+From the Yarn UI:
+
+Go to Ambari --> Yarn UI --> click on application that you want to kill --> Click on "kill application" towards top left.
 
 This will kill any query that is being run as part of the Tez session also.
 
