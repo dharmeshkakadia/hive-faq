@@ -130,6 +130,9 @@ Trash interval decides how long the data deleted from HDFS is kept around. You c
 
 ## How do I specify compression codec for intermediate output?
 
+## How do I know version of various components?
+``hdp-select``
+
 ## How do I check the version of 
 ``hadoop version`` should return detailed version information as follows:
 
