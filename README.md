@@ -124,6 +124,18 @@ Trash interval decides how long the data deleted from HDFS is kept around. You c
 
 ## How do I specify compression codec for intermediate output?
 
+## How do I check the version of 
+``hadoop version`` should return detailed version information as follows:
+
+```
+Hadoop 2.7.3.2.5.2.1-1
+Subversion git@github.com:hortonworks/hadoop.git -r f3d31dd3dc216fff8acd4da01075656131947e1d
+Compiled by jenkins on 2016-11-07T18:55Z
+Compiled with protoc 2.5.0
+From source with checksum a6c8c64bfe734b01a46c7c480ebc7ff
+This command was run using /usr/hdp/2.5.2.1-1/hadoop/hadoop-common-2.7.3.2.5.2.1-1.jar
+```
+
 ## How do I check if native compression codecs are properly setup?
 ``hadoop checknative -a`` should list output similar to
 
