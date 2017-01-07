@@ -124,6 +124,19 @@ Trash interval decides how long the data deleted from HDFS is kept around. You c
 
 ## How do I specify compression codec for intermediate output?
 
+## How do I check if native compression codecs are properly setup?
+``hadoop checknative -a`` should list output similar to
+
+```
+Native library checking:
+hadoop:  true /usr/hdp/2.5.2.1-1/hadoop/lib/native/libhadoop.so.1.0.0
+zlib:    true /lib/x86_64-linux-gnu/libz.so.1
+snappy:  true /usr/lib/x86_64-linux-gnu/libsnappy.so.1
+lz4:     true revision:99
+bzip2:   true /lib/x86_64-linux-gnu/libbz2.so.1
+openssl: true /usr/lib/x86_64-linux-gnu/libcrypto.so
+```
+
 ## How do I specify the ORC compression?
 ``orc.compress``. Possible values are ``NONE``, ``ZLIB`` and ``SNAPPY``. ``ZLIB`` is a good default choice.
 
