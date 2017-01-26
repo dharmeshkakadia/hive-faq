@@ -84,6 +84,18 @@ This will kill any query that is being run as part of the Tez session also.
 ### How do I check currently running application on the cluster?
 ``yarn top``
 
+### How to I export hive metastore and import it on new cluster?
+Run the following where you want to export the metastore:
+```
+for d in `hive -e "show databases"`; do echo "create database $d; use $d;" >> alltables.sql ; for t in `hive --database $d -e "show tables"` ; do ddl=`hive --database $d -e "show create table $t"`; echo "$ddl ;" >> alltables.sql ; echo "$ddl" | grep -q "PARTITIONED\s*BY" && echo "MSCK REPAIR TABLE $t ;" >> alltables.sql ; done; done
+```
+
+This will generate a ``allatables.sql`` file. Copy this file to new cluster and run the following on new cluster:
+```
+hive -f alltables.sql
+```
+This assumes that data path on new cluster are same as on old. If not, you can manually edit the generated ``alltables.sql`` file to reflect any changes.
+
 ### How do I specify the database while starting hive?
 ``hive -database <databaseName>``
 
