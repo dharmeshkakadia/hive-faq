@@ -182,6 +182,9 @@ openssl: true /usr/lib/x86_64-linux-gnu/libcrypto.so
 ## Where can I find more information about Hive ORC configurations?
 here : https://orc.apache.org/docs/hive-config.html
 
+## How can I list all the effective configurations?
+run ``set``.
+
 ## How do I get the query plan?
 run ``explain `` followed by the query string.
 
