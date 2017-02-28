@@ -102,6 +102,12 @@ This assumes that data path on new cluster are same as on old. If not, you can m
 ### How do I specify a config or variable while starting hive?
 ``hive -hiveconf a=b``
 
+### How do I list all columns and their types for a table?
+Within hive/beeline shell run ``desc <tablename>``
+
+### How do I list all properties of a table?
+Within hive/beeline shell run ``desc extended <tablename>``. The output includes all the column names, their types, data format, compression properties, table statistics, columns statistics etc. 
+
 ### How do I disable mapjoin?
 ``set hive.auto.convert.join=false``
 
