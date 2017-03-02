@@ -117,6 +117,9 @@ set ``hive.auto.convert.join.noconditionaltask.size`` to value of the largest jo
 ### How do I decide the right container size for my workload?
 Magic ! 
 
+### Does hive support Transactions?
+Yes. Look [here](https://cwiki.apache.org/confluence/display/Hive/Hive+Transactions)
+
 ### How do I change the container size for hive on tez?
 Set ``hive.tez.container.size`` to the desired value in MB. While changing the container size you should make sure that values of ``hive.tez.java.opts`` (0.8\*hive.tez.container.size) and ``tez.runtime.io.sort.mb`` (0.4\*hive.tez.container.size) are adjusted accordingly. 
 
