@@ -154,7 +154,7 @@ Trash interval decides how long the data deleted from HDFS is kept around. You c
 ## How do I know version of various components?
 ``hdp-select``
 
-## How do I check the version of 
+## How do I check the version of hadoop?
 ``hadoop version`` should return detailed version information as follows:
 
 ```
