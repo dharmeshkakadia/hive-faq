@@ -37,7 +37,7 @@ Go to Dag counters and look for HDFS_BYTES_READ/HDFS_BYTES_WRITTEN/SHUFFLE_BYTES
 ``/var/log/hive/hiveserver2.log``
 
 ### How to I start hive shell with debug logging enabled on console?
-hive -hiveconf hive.root.logger=ALL,console
+``hive -hiveconf hive.root.logger=ALL,console``
 
 ### How do I use tez engine?
 ``set hive.execution.engine=tez``
