@@ -179,8 +179,11 @@ bzip2:   true /lib/x86_64-linux-gnu/libbz2.so.1
 openssl: true /usr/lib/x86_64-linux-gnu/libcrypto.so
 ```
 
-## How do I dump content of an ORC file?
+## How do I dump metadata of an ORC file?
 ``hive --orcfiledump <path-to-ORC-file>``
+
+## How do I dump content of an ORC file?
+``hive --orcfiledump -d <path-to-ORC-file>``
 
 ## How do I specify the ORC compression?
 ``orc.compress``. Possible values are ``NONE``, ``ZLIB`` and ``SNAPPY``. ``ZLIB`` is a good default choice.
