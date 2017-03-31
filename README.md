@@ -143,18 +143,21 @@ In both cases, using a larger cluster or cluster with more disk spaces on nodes 
 ## How do I configure the trash interval for HDFS?
 Trash interval decides how long the data deleted from HDFS is kept around. You can configure it with ``fs.trash.interval``. The deleted data is kept under ``.Trash/Current`` directory on HDFS and can be restored from there.
 
-## How does tez decide how many map tasks to generaete?
+### How does tez decide how many map tasks to generaete?
 
-## How does tez decide how many reducer tasks to generate?
+### How does tez decide how many reducer tasks to generate?
 
-## How do turn on compression for intermediate output?
+### How do turn on compression for intermediate output?
 
-## How do I specify compression codec for intermediate output?
+### How do I specify compression codec for intermediate output?
 
-## How do I know version of various components?
+### How do I use [Hplsql](http://www.hplsql.org/)?
+Use ``/usr/hdp/current/hive-server2-hive2/bin/hplsql``
+
+### How do I know version of various components?
 ``hdp-select``
 
-## How do I check the version of hadoop?
+### How do I check the version of hadoop?
 ``hadoop version`` should return detailed version information as follows:
 
 ```
@@ -166,7 +169,7 @@ From source with checksum a6c8c64bfe734b01a46c7c480ebc7ff
 This command was run using /usr/hdp/2.5.2.1-1/hadoop/hadoop-common-2.7.3.2.5.2.1-1.jar
 ```
 
-## How do I check if native compression codecs are properly setup?
+### How do I check if native compression codecs are properly setup?
 ``hadoop checknative -a`` should list output similar to
 
 ```
@@ -179,41 +182,41 @@ bzip2:   true /lib/x86_64-linux-gnu/libbz2.so.1
 openssl: true /usr/lib/x86_64-linux-gnu/libcrypto.so
 ```
 
-## How do I dump metadata of an ORC file?
+### How do I dump metadata of an ORC file?
 ``hive --orcfiledump <path-to-ORC-file>``
 
-## How do I dump content of an ORC file?
+### How do I dump content of an ORC file?
 ``hive --orcfiledump -d <path-to-ORC-file>``
 
-## How do I specify the ORC compression?
+### How do I specify the ORC compression?
 ``orc.compress``. Possible values are ``NONE``, ``ZLIB`` and ``SNAPPY``. ``ZLIB`` is a good default choice.
 
-## How do I specify ORC strip size?
+### How do I specify ORC strip size?
 ``orc.stripe.size``
 
-## How do I specify ORC encoding strategy for integers?
+### How do I specify ORC encoding strategy for integers?
 ``hive.exec.orc.encoding.strategy``. Possible values are ``SPEED`` and ``COMPRESSION``.
 
-## Where can I find more information about Hive ORC configurations?
+### Where can I find more information about Hive ORC configurations?
 here : https://orc.apache.org/docs/hive-config.html
 
-## How can I list all the effective configurations?
+### How can I list all the effective configurations?
 run ``set``.
 
-## How do I get the query plan?
+### How do I get the query plan?
 run ``explain `` followed by the query string.
 
-## How do I get machine readble query plan?
+### How do I get machine readble query plan?
 run ``explain formatted `` followed by the query string.
 
-## How do I get very detailed query plans?
+### How do I get very detailed query plans?
 run ``explain extended `` followed by the query string. This includes things like what partitions were pruned.
 
-## How do I know if the a perticular join in the query is a map join or a merge join?
+### How do I know if the a perticular join in the query is a map join or a merge join?
 The query plan will have ``Map Join Operator`` and ``Merge Join Operarator`` to indicate that.
 
-## How do I specify ORC split strategy?
+### How do I specify ORC split strategy?
 set ``hive.exec.orc.split.strategy``. Possible values are ``BI``, ``ETL`` and ``HYBIRD``.
 
-## Where are all hive configurations listed?
+### Where are all hive configurations listed?
 here : https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties
