@@ -123,6 +123,9 @@ Yes. Look [here](https://cwiki.apache.org/confluence/display/Hive/Hive+Transacti
 ### How do I change the container size for hive on tez?
 Set ``hive.tez.container.size`` to the desired value in MB. While changing the container size you should make sure that values of ``hive.tez.java.opts`` (0.8\*hive.tez.container.size) and ``tez.runtime.io.sort.mb`` (0.4\*hive.tez.container.size) are adjusted accordingly. 
 
+### How do I turn off vectorization in hive?
+set ``hive.vectorized.execution.enabled`` to ``false``. Hive vectorization has been source of many many errors and usually the error trace when the query fails, has the vectorization operator name.
+
 ### My cluster disk space is filled what do I do?
 Go to Ambari -> HDFS. Check the values of ``Disk Usage (DFS Used)`` and ``Disk Usage (Non DFS Used)`` and decide which one is taking most of the space on the cluster. If most data is used for,
 
